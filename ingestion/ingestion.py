@@ -3,6 +3,7 @@ import pika
 import json
 import os
 import time
+import sys
 from utils import parse_log, is_get_request
 
 #Connect  to RabbitMQ
@@ -28,7 +29,7 @@ channel.queue_declare(queue='log-analysis')
 
 # Read weblogs
 
-f = open('weblogs.log', 'r')
+f = open('weblogs.log', 'r', encoding="ASCII")
 
 while True:
     try:
@@ -48,6 +49,6 @@ while True:
                                   body=body)
         
     except:
-        print("Unexpected error:" +  sys.exc_info()[0])
+        print("Unexpected error:" +  str(sys.exc_info()[0]))
     
 connection.close()
