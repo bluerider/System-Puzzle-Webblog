@@ -1,6 +1,6 @@
 ## Table of Contents
 1. [Challenge](README.md#challenge)
-2. [Running the code][README.md#Run)
+2. [Running the code](README.md#Run)
 3. [Struggles](README.md#struggles)
 
 ## Challenge
