@@ -5,7 +5,6 @@ COPY requirements_ingestion.txt .
 COPY weblogs.log .
 COPY ingestion.py .
 COPY utils.py .
-COPY utils.pyc .
 RUN pip install -r requirements_ingestion.txt
 EXPOSE 5672
 
